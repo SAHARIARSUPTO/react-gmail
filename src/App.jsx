@@ -1,11 +1,9 @@
 
-import Sidebar from "./Home/Sidebars/Sidebar";
-
+import Sidebar from "./Home/Layout/Sidebar";
 function App() {
 
   return (
     <>
-
 <Sidebar></Sidebar>
     </>
   )

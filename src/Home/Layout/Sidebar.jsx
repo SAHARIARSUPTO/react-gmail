@@ -24,6 +24,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Emails from "./Emails";
+import ComposeEmail from './ComposeEmail';
 
 const drawerWidth = 240;
 
@@ -184,6 +185,7 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
+        <ComposeEmail></ComposeEmail>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -197,7 +199,7 @@ function ResponsiveDrawer(props) {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['All mail', 'Trash', 'Spam','More'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -326,8 +328,8 @@ function ResponsiveDrawer(props) {
               boxSizing: 'border-box',
               width: drawerWidth,
               zIndex: (theme) => theme.zIndex.drawer,
-              borderTopLeftRadius: '20px', // Set border radius
-              borderBottomLeftRadius: '20px', // Set border radius
+              borderTopLeftRadius: '20px', 
+              borderBottomLeftRadius: '20px', 
             },
           }}
           open
@@ -346,7 +348,6 @@ function ResponsiveDrawer(props) {
   }}
 >
         <Toolbar />
-{/* Emails list should be showed here */}
 <Emails></Emails>
       </Box>
       {renderMobileMenu}
